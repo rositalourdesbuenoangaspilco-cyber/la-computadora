@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aprende Computación</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #bdeeff;
+    color: #24445c;
+    padding-bottom: 30px;
+}
+
+header {
+    background: #79c9ed;
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+    border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    font-size: 27px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 15px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.menu button {
+    border: none;
+    border-radius: 15px;
+    padding: 18px 8px;
+    background: white;
+    color: #28617e;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px #83b9d0;
+    cursor: pointer;
+}
+
+.menu button:active {
+    transform: scale(.97);
+}
+
+.menu span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.seccion {
+    display: none;
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: 15px;
+    box-shadow: 0 3px 10px #91c5d9;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+h2 {
+    color: #2585ad;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 12px 0;
+    color: #26799b;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.parte {
+    background: #e7f8ff;
+    padding: 13px;
+    border-radius: 12px;
+    margin: 12px 0;
+    text-align: center;
+}
+
+.parte img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.parte p {
+    font-size: 14px;
+}
+
+.boton {
+    background: #43a9d5;
+    color: white;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.opcion {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 9px 0;
+    border: 2px solid #a9def1;
+    border-radius: 10px;
+    background: #f1fbff;
+    color: #24445c;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    background: #ccefff;
+}
+
+#resultado {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💻 Aprende Computación</h1>
+    <p>¡Aprende tecnología de manera divertida!</p>
+</header>
+
+<div class="container">
+
+<div class="menu">
+    <button onclick="mostrar('inicio')">
+        <span>🏠</span>Inicio
+    </button>
+
+    <button onclick="mostrar('hardware')">
+        <span>🖥️</span>Hardware
+    </button>
+
+    <button onclick="mostrar('software')">
+        <span>💿</span>Software
+    </button>
+
+    <button onclick="mostrar('juego')">
+        <span>🎮</span>Jugar
+    </button>
+
+    <button onclick="mostrar('examen')">
+        <span>📝</span>Examen
+    </button>
+
+    <button onclick="mostrar('ayuda')">
+        <span>📚</span>Ayuda
+    </button>
+</div>
+
+<!-- INICIO -->
+<section id="inicio" class="seccion activa">
+    <h2>¡Bienvenido! 👋</h2>
+    <p>
+        Bienvenido a Aprende Computación.
+        Aquí conocerás las partes de una computadora
+        y aprenderás sobre hardware y software.
+    </p>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600"
+        alt="Computadora">
+        <h3>¿Qué es una computadora?</h3>
+        <p>
+        Es una máquina electrónica que recibe,
+        procesa y almacena información.
+        </p>
+    </div>
+</section>
+
+<!-- HARDWARE -->
+<section id="hardware" class="seccion">
+    <h2>🖥️ ¿Qué es el Hardware?</h2>
+    <p>
+        El hardware son todas las partes físicas
+        de una computadora que podemos tocar.
+    </p>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600" alt="Monitor">
+        <h3>1. Monitor</h3>
+        <p>Es la pantalla donde podemos ver imágenes,
+        videos, textos y programas.</p>
+    </div>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600" alt="Teclado">
+        <h3>2. Teclado</h3>
+        <p>Sirve para escribir letras, números
+        y dar órdenes a la computadora.</p>
+    </div>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600" alt="Mouse">
+        <h3>3. Mouse</h3>
+        <p>Permite mover el cursor, seleccionar
+        y abrir programas.</p>
+    </div>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600" alt="CPU">
+        <h3>4. Gabinete o torre</h3>
+        <p>Es la caja que contiene componentes
+        importantes como la placa madre,
+        el procesador y la memoria RAM.</p>
+    </div>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600" alt="Procesador">
+        <h3>5. Procesador</h3>
+        <p>Es el componente que ejecuta
+        instrucciones y procesa información.</p>
+    </div>
+
+    <div class="parte">
+        <img src="https://images.unsplash.com/photo-1562976540-1502c2145186?w=600" alt="Memoria">
+        <h3>6. Memoria RAM</h3>
+        <p>Almacena temporalmente los datos
+        que se utilizan mientras trabajamos.</p>
+    </div>
+</section>
+
+<!-- SOFTWARE -->
+<section id="software" class="seccion">
+    <h2>💿 ¿Qué es el Software?</h2>
+    <p>
+        El software es el conjunto de programas
+        e instrucciones que permiten que la
+        computadora funcione.
+    </p>
+
+    <div class="parte">
+        <h3>🪟 Sistema operativo</h3>
+        <p>Es el programa principal que administra
+        la computadora. Ejemplos: Windows y Linux.</p>
+    </div>
+
+    <div class="parte">
+        <h3>🌐 Navegadores</h3>
+        <p>Permiten entrar a páginas de Internet.
+        Ejemplos: Chrome, Firefox y Edge.</p>
+    </div>
+
+    <div class="parte">
+        <h3>📝 Procesadores de texto</h3>
+        <p>Sirven para crear documentos.
+        Ejemplo: Microsoft Word.</p>
+    </div>
+
+    <div class="parte">
+        <h3>📊 Hojas de cálculo</h3>
+        <p>Permiten organizar números y realizar
+        operaciones. Ejemplo: Excel.</p>
+    </div>
+
+    <div class="parte">
+        <h3>🛡️ Antivirus</h3>
+        <p>Ayuda a detectar, bloquear y eliminar
+        programas maliciosos.</p>
+    </div>
+</section>
+
+<!-- JUEGO -->
+<section id="juego" class="seccion">
+    <h2>🎮 Juego de Computación</h2>
+    <p id="preguntaJuego"></p>
+    <div id="opcionesJuego"></div>
+    <p id="resultado"></p>
+    <button class="boton" onclick="siguienteJuego()">
+        Siguiente pregunta
+    </button>
+    <p id="puntos"></p>
+</section>
+
+<!-- EXAMEN -->
+<section id="examen" class="seccion">
+    <h2>📝 Examen de Computación</h2>
+    <p id="preguntaExamen"></p>
+    <div id="opcionesExamen"></div>
+    <p id="resultadoExamen"></p>
+    <button class="boton" onclick="siguienteExamen()">
+        Siguiente pregunta
+    </button>
+    <p id="nota"></p>
+</section>
+
+<!-- AYUDA -->
+<section id="ayuda" class="seccion">
+    <h2>📚 Lo que debes recordar</h2>
+    <h3>Hardware</h3>
+    <p>Son las partes físicas que podemos tocar.</p>
+
+    <h3>Software</h3>
+    <p>Son los programas que usamos en la computadora.</p>
+
+    <h3>Ejemplo</h3>
+    <p>El teclado es hardware y Windows es software.</p>
+
+    <h3>¡Sigue aprendiendo!</h3>
+    <p>Practica todos los días para convertirte
+    en un experto en computación.</p>
+</section>
+
+</div>
+
+<footer>
+    💙 Aprende Computación © 2026
+    <br>Educación para todos
+</footer>
+
+<script>
+
+function mostrar(id) {
+    document.querySelectorAll('.seccion').forEach(s => {
+        s.classList.remove('activa');
+    });
+
+    document.getElementById(id).classList.add('activa');
+}
+
+// PREGUNTAS DEL JUEGO
+const preguntas = [
+    {
+        pregunta: "¿Cuál es una parte física de la computadora?",
+        opciones: ["Windows", "Teclado", "Google"],
+        correcta: "Teclado"
+    },
+    {
+        pregunta: "¿Qué es el software?",
+        opciones: ["Los programas", "El monitor", "El mouse"],
+        correcta: "Los programas"
+    },
+    {
+        pregunta: "¿Para qué sirve el mouse?",
+        opciones: ["Imprimir", "Mover el cursor", "Escuchar"],
+        correcta: "Mover el cursor"
+    },
+    {
+        pregunta: "¿Cuál es un sistema operativo?",
+        opciones: ["Windows", "Teclado", "Monitor"],
+        correcta: "Windows"
+    },
+    {
+        pregunta: "¿Qué componente procesa instrucciones?",
+        opciones: ["Mouse", "Procesador", "Monitor"],
+        correcta: "Procesador"
+    }
+];
+
+let indiceJuego = 0;
+let puntosJuego = 0;
+let respondidoJuego = false;
+
+function cargarJuego() {
+    const p = preguntas[indiceJuego];
+    document.getElementById("preguntaJuego").textContent =
+        p.pregunta;
+
+    document.getElementById("resultado").textContent = "";
+    document.getElementById("opcionesJuego").innerHTML = "";
+    respondidoJuego = false;
+
+    p.opciones.forEach(opcion => {
+        let btn = document.createElement("button");
+        btn.className = "opcion";
+        btn.textContent = opcion;
+
+        btn.onclick = () => {
+            if (respondidoJuego) return;
+            respondidoJuego = true;
+
+            if (opcion === p.correcta) {
+                puntosJuego++;
+                document.getElementById("resultado").textContent =
+                    "¡Muy bien! Respuesta correcta 🎉";
+            } else {
+                document.getElementById("resultado").textContent =
+                    "Incorrecto. La respuesta era: " + p.correcta;
+            }
+
+            document.getElementById("puntos").textContent =
+                "Puntos: " + puntosJuego;
+        };
+
+        document.getElementById("opcionesJuego").appendChild(btn);
+    });
+}
+
+function siguienteJuego() {
+    if (!respondidoJuego) {
+        document.getElementById("resultado").textContent =
+            "Primero responde la pregunta.";
+        return;
+    }
+
+    indiceJuego++;
+
+    if (indiceJuego >= preguntas.length) {
+        alert("¡Juego terminado! Tu puntuación: " +
+              puntosJuego + " de " + preguntas.length);
+
+        indiceJuego = 0;
+        puntosJuego = 0;
+    }
+
+    cargarJuego();
+}
+
+// EXAMEN
+let indiceExamen = 0;
+let puntosExamen = 0;
+let respondidoExamen = false;
+
+function cargarExamen() {
+    const p = preguntas[indiceExamen];
+
+    document.getElementById("preguntaExamen").textContent =
+        p.pregunta;
+
+    document.getElementById("resultadoExamen").textContent = "";
+    document.getElementById("opcionesExamen").innerHTML = "";
+    respondidoExamen = false;
+
+    p.opciones.forEach(opcion => {
+        let btn = document.createElement("button");
+        btn.className = "opcion";
+        btn.textContent = opcion;
+
+        btn.onclick = () => {
+            if (respondidoExamen) return;
+            respondidoExamen = true;
+
+            if (opcion === p.correcta) {
+                puntosExamen++;
+                document.getElementById("resultadoExamen").textContent =
+                    "¡Correcto! ⭐";
+            } else {
+                document.getElementById("resultadoExamen").textContent =
+                    "Respuesta correcta: " + p.correcta;
+            }
+        };
+
+        document.getElementById("opcionesExamen").appendChild(btn);
+    });
+}
+
+function siguienteExamen() {
+    if (!respondidoExamen) {
+        document.getElementById("resultadoExamen").textContent =
+            "Responde antes de continuar.";
+        return;
+    }
+
+    indiceExamen++;
+
+    if (indiceExamen >= preguntas.length) {
+        document.getElementById("nota").textContent =
+            "Tu nota: " + puntosExamen + " de " +
+            preguntas.length;
+
+        alert("¡Examen terminado! Obtuviste " +
+              puntosExamen + " de " + preguntas.length);
+
+        indiceExamen = 0;
+        puntosExamen = 0;
+    }
+
+    cargarExamen();
+}
+
+cargarJuego();
+cargarExamen();
+
+</script>
+
+</body>
+</html>
